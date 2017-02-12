@@ -1,8 +1,6 @@
 # sarapin
 Temukan tempat sarapan favoritmu
 
-![alt text](https://image.ibb.co/bCBE5a/halal_express.gif "Sarapin Demo")
-
 ### Installation :
 Open Terminal, and clone this repo:  
 > git clone https://github.com/harryandriyan/sarapin
