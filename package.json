@@ -13,7 +13,9 @@
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "4.13.3",
-    "pug": "^2.0.0-beta11"
+    "node-foursquare": "^0.3.0",
+    "pug": "^2.0.0-beta11",
+    "superagent": "^3.4.1"
   },
   "devDependencies": {
     "babel": "5.8.29",
