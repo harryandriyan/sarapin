@@ -1,3 +1,3 @@
-let accessToken = undefined;
+let accessToken = '';
 
 export default accessToken;

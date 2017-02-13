@@ -14,7 +14,7 @@ html
                 nav.uk-navbar-container.uk-margin(uk-navbar)
                     div.uk-navbar-left
                         a.uk-navbar-item.uk-logo(href='/')
-                            img(src='images/logo/sarapin.png' width='170')
+                            img(src='/images/logo/sarapin.png' width='170')
                     div.uk-navbar-center
                         div.uk-navbar-item
                             form.uk-grid.uk-grid-small(method='get' action='/cari')
@@ -27,7 +27,7 @@ html
                     div.uk-navbar-right
                         ul.uk-navbar-nav
                             li
-                                if accessToken
+                                if data.token
                                     a(href='/profile') Profile
                                 else
                                     a(href='/auth') Login

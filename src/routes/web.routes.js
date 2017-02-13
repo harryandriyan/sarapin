@@ -1,13 +1,18 @@
 // Import node module
 import express from 'express';
 import config from './config';
-import accessToken from './accessToken';
+//import accessToken from './accessToken';
 const foursquare = require('node-foursquare')(config);
 
 const web = express.Router();
 
 web.get('/', (req, res) => {
-    res.render('home', { data: null });
+    const token = req.query.token;
+    const data = {
+        token: token,
+        data: null
+    }
+    res.render('home', { data: data });
 });
 
 web.get('/auth', (req, res) => {
@@ -22,7 +27,7 @@ web.get('/auth/callback', (req, res) => {
         if(error) {
             res.send(`An error was thrown: ${error.message}`);
         } else {
-            res.render('home', { data: null, accessToken: token });
+            res.redirect(`/?token=${token}`);
         }
      });
 });
