@@ -11,7 +11,7 @@ web.get('/', (req, res) => {
     const data = {
         token: token,
         data: null
-    }
+    };
     res.render('home', { data: data });
 });
 
@@ -27,18 +27,10 @@ web.get('/auth/callback', (req, res) => {
         if(error) {
             res.send(`An error was thrown: ${error.message}`);
         } else {
+            // save token disni
             res.redirect(`/?token=${token}`);
         }
      });
-});
-
-web.get('/cari', (req, res) => {
-    const token = req.query.token;
-    const data = {
-        token: token,
-        data: null
-    }
-    res.render('home', { data: data });
 });
 
 // Exporting an object as the default import for this module
