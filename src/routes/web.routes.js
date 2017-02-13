@@ -1,7 +1,5 @@
-//Import node module
 import express from 'express';
 import config from './config';
-//import accessToken from './accessToken';
 const foursquare = require('node-foursquare')(config);
 
 const web = express.Router();
@@ -27,11 +25,9 @@ web.get('/auth/callback', (req, res) => {
         if(error) {
             res.send(`An error was thrown: ${error.message}`);
         } else {
-            // save token disni
             res.redirect(`/?token=${token}`);
         }
      });
 });
 
-// Exporting an object as the default import for this module
 export default web;

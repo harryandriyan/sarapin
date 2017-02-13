@@ -26,18 +26,11 @@ html
                                     button.uk-button.uk-button-default Temukan
                     div.uk-navbar-right
                         ul.uk-navbar-nav
-                            li
-                                if data.token
-                                    a(href='/profile') Profile
-                                else
-                                    a(href='/auth') Login
-
+                            li#right-menu
                 div#app(uk-grid)
                     div.uk-width-1-1
                         block content
                 footer
                     div.footer
                         p Copyright &copy; 2017
-        script.
-            window.token = data.token
         script(src='/js/app.js')
