@@ -1,14 +1,23 @@
 extends layout
 block content
-    div.uk-container.uk-container-small.uk-position-relative
-        ul.uk-list.uk-list-divider
-            li
-                div.uk-card.uk-card-default.uk-grid-collapse.uk-margin(class='uk-child-width-1-2@s', uk-grid='')
-                  .uk-card-media-right.uk-cover-container(class='uk-flex-last@s')
-                    img(src='/images/1464505_QmnXxZa_pGcE8H4ieBtKgmDlvourdoOKuRYBido1lQw.jpg', alt='', uk-cover='')
-                    canvas(width='600', height='400')
-                  div
-                    .uk-card-body
-                      h3.uk-card-title Media Right
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+    div.uk-light(class='uk-child-width-1-1@s', uk-grid='')
+        div
+            div.uk-background-cover.uk-height-medium.uk-panel.uk-flex.uk-flex-right.uk-flex-middle(style='background-image: url(/images/banner.jpg);')
+                div.banner
+                    p.uk-h1
+                        b Temukan Tempat Sarapan Favoritmu
+    div.uk-grid-collapse.uk-text-center(class='uk-child-width-expand@s', uk-grid='')
+        div.separator-banner
+    div.uk-grid-collapse.uk-text-center(class='uk-child-width-expand@s', uk-grid='')
+        div
+            .uk-background-muted.uk-padding
+                p.uk-h1(uk-icon="icon: search; ratio: 4")
+                p.uk-h2 Cari
+        div
+            .uk-background-temukan.uk-padding.uk-light
+                p.uk-h1(uk-icon="icon: check; ratio: 4")
+                p.uk-h2 Temukan
+        div
+            .uk-background-sarapin.uk-padding.uk-light
+                p.uk-h1(uk-icon="icon: heart; ratio: 4")
+                p.uk-h2 Sarapan

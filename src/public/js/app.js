@@ -33,4 +33,29 @@ $(document).ready(function() {
     }
 
     setRightMenu();
+
+    google.maps.event.addDomListener(window, 'load', function () {
+        var places = new google.maps.places.Autocomplete(document.getElementById('address'));
+        google.maps.event.addListener(places, 'place_changed', function () {
+            var place = places.getPlace();
+            var address = place.formatted_address;
+            var latitudeLongitude = place.geometry.location;
+
+            var result = "ll:" + latitudeLongitude;
+            var ll = result.substr(4);
+            window.latlng = ll.slice(0,-1);
+        });
+    });
+
+    $('#explore-form').on('keyup keypress', function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 13) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    $('#explore-button').click(function() {
+        console.log('www');
+    })
 });

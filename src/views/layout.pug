@@ -7,6 +7,7 @@ html
         link(rel='stylesheet' href='/css/app.css')
         script(src='/js/jquery-3.1.1.min.js')
         script(src='/js/uikit.min.js')
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDBv1qRbPGO4fZOCB-vM74eoOvUciaWTCM&libraries=places')
     body
         div
             div#container.uk-navbar-container.tm-navbar-container
@@ -17,13 +18,13 @@ html
                             img(src='/images/logo/sarapin.png' width='170')
                     div.uk-navbar-center
                         div.uk-navbar-item
-                            form.uk-grid.uk-grid-small
+                            form#explore-form.uk-grid.uk-grid-small
                                 div.uk-width-1-3.uk-grid-margin.uk-first-column
-                                    input.uk-input.uk-form-width-large(type='text' placeholder='Kata Kunci')
+                                    input.uk-input.uk-form-width-large(type='text' placeholder='Sarapan ... nasi ? roti ? kopi ?')
                                 div.uk-width-1-3.uk-grid-margin
-                                    input.uk-input.uk-form-width-large(type='text' placeholder='Cari di Kota')
+                                    input#address.uk-input.uk-form-width-large(type='text' placeholder='Cari di Kota')
                                 div.uk-width-1-3.uk-grid-margin
-                                    button.uk-button.uk-button-default Temukan
+                                    button#explore-button.uk-button.uk-button-default(type='button') Temukan
                     div.uk-navbar-right
                         ul.uk-navbar-nav
                             li#right-menu
