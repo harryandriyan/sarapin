@@ -1,4 +1,4 @@
-// Import node module
+//Import node module
 import express from 'express';
 import config from './config';
 //import accessToken from './accessToken';
@@ -33,7 +33,12 @@ web.get('/auth/callback', (req, res) => {
 });
 
 web.get('/cari', (req, res) => {
-    res.render('home', { data: null });
+    const token = req.query.token;
+    const data = {
+        token: token,
+        data: null
+    }
+    res.render('home', { data: data });
 });
 
 // Exporting an object as the default import for this module
