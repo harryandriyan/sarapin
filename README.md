@@ -1,6 +1,8 @@
 # sarapin
 Temukan tempat sarapan favoritmu
 
+![alt text](https://media.giphy.com/media/l0Heh70WW2ieukUFO/source.gif "Sarapin - Temukan tempat sarapan favoritmu")
+
 ### Installation :
 Open Terminal, and clone this repo:  
 > git clone https://github.com/harryandriyan/sarapin

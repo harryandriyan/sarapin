@@ -7,10 +7,32 @@ block content
             a(target='blank' href=url) Lihat di Foursquare
             .uk-grid-match(class='uk-child-width-1-3@m', uk-grid='')
                 div
-                    p #{data.location.formattedAddress}
+                    table.uk-table.uk-table-hover
+                        thead
+                            tr
+                                th Info
+                                th Keterangan
+                        tbody
+                            tr
+                                td Rating
+                                td
+                                    span.uk-badge #{data.rating}
+                            tr
+                                td Alamat
+                                td #{data.location.formattedAddress}
+                            tr
+                                td Kontak
+                                td #{data.contact.formattedPhone}
+
                 div
-                    each cat in data.categories.length ? data.categories : ['Tidak ada Kategori']
-                        p #{cat.name}
+                    table.uk-table.uk-table-hover
+                        thead
+                            tr
+                                th Tempat sarapan kategori
+                        tbody
+                            each cat in data.categories.length ? data.categories : ['Tidak ada Kategori']
+                                tr
+                                    td #{cat.name}
                 div
-                    - imgUrl = data.bestPhoto.prefix + '/360' +data.bestPhoto.suffix;
+                    - imgUrl = data.bestPhoto.prefix + '360' +data.bestPhoto.suffix;
                     img(src=imgUrl)
