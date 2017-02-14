@@ -44,6 +44,7 @@ $(document).ready(function() {
             var result = "ll:" + latitudeLongitude;
             var ll = result.substr(4);
             window.latlng = ll.slice(0,-1);
+            $('#explore-button').removeAttr('disabled');
         });
     });
 
@@ -56,6 +57,7 @@ $(document).ready(function() {
     });
 
     $('#explore-button').click(function() {
-        console.log('www');
+        var q = $('#q').val();
+        window.location.href = '/explore?ll='+window.latlng+'&q='+q;
     })
 });

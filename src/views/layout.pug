@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        title Temukan tempat Sarapan favoritmu
+        title Sarapin - Temukan tempat Sarapan favoritmu
         meta(name='viewport' content='width=device-width, initial-scale=1')
         link(rel='stylesheet' href='/css/uikit.min.css')
         link(rel='stylesheet' href='/css/app.css')
@@ -20,11 +20,11 @@ html
                         div.uk-navbar-item
                             form#explore-form.uk-grid.uk-grid-small
                                 div.uk-width-1-3.uk-grid-margin.uk-first-column
-                                    input.uk-input.uk-form-width-large(type='text' placeholder='Sarapan ... nasi ? roti ? kopi ?')
+                                    input#q.uk-input.uk-form-width-large(type='text' placeholder='Sarapan ... nasi ? roti ? kopi ?')
                                 div.uk-width-1-3.uk-grid-margin
                                     input#address.uk-input.uk-form-width-large(type='text' placeholder='Cari di Kota')
                                 div.uk-width-1-3.uk-grid-margin
-                                    button#explore-button.uk-button.uk-button-default(type='button') Temukan
+                                    button#explore-button.uk-button.uk-button-default(type='button' disabled) Temukan
                     div.uk-navbar-right
                         ul.uk-navbar-nav
                             li#right-menu

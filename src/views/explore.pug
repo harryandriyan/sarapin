@@ -1,14 +1,9 @@
 extends layout
 block content
-div.uk-container.uk-container-small.uk-position-relative
-    ul.uk-list.uk-list-divider
-        li
-            div.uk-card.uk-card-default.uk-grid-collapse.uk-margin(class='uk-child-width-1-2@s', uk-grid='')
-              .uk-card-media-right.uk-cover-container(class='uk-flex-last@s')
-                img(src='/images/1464505_QmnXxZa_pGcE8H4ieBtKgmDlvourdoOKuRYBido1lQw.jpg', alt='', uk-cover='')
-                canvas(width='600', height='400')
-              div
-                .uk-card-body
-                  h3.uk-card-title Media Right
-                  p
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+    ul.uk-list.uk-list-striped
+        each list in data.length ? data : ['Tidak ada tempat yang ditemukan']
+            li
+                h5 #{list.name}
+                p #{list.location.formattedAddress}
+                - url = list.id;
+                a(target='blank' href='/venue/' + url) Lihat Detail
